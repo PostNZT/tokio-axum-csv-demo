@@ -1,4 +1,6 @@
-## Running the Performance Demo
+# Tokio vs Axum CSV Performance Demo
+
+This project demonstrates performance differences between Tokio and Axum when loading and processing CSV files.
 
 ## Project Structure
 ```
