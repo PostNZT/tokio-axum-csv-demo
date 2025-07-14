@@ -1,0 +1,41 @@
+[package]
+name = "tokio-axum-csv-demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+axum = { version = "0.7", features = ["multipart"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["fs"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+csv = "1.3"
+tokio-util = "0.7"
+futures = "0.3"
+rand = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+rayon = "1.8"
+clap = { version = "4.0", features = ["derive"] }
+num_cpus = "1.0"
+
+[[bin]]
+name = "generate_data"
+path = "src/csv_generator.rs"
+
+[[bin]]
+name = "tokio_csv"
+path = "examples/tokio_csv_demo.rs"
+
+[[bin]]
+name = "simple_tokio"
+path = "examples/simple_tokio_csv.rs"
+
+[[bin]]
+name = "benchmark"
+path = "examples/simple_benchmark.rs"
+
+[[bin]]
+name = "axum_csv"
+path = "examples/simple_axum_server.rs"
